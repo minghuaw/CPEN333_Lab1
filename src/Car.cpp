@@ -15,4 +15,3 @@ double Car::getMass(){
 double Car::getState(){
     return car_state;
 }
-
