@@ -1,1 +1,3 @@
-.settings/ .cproject .project
+/.settings
+.cproject
+.project
