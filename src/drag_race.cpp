@@ -3,6 +3,7 @@
 #include <string>
 #include "State.h"
 #include "Car.h"
+#include "Car.cpp"
    
 int main() {
     Car car1("Mazda 3", 1600, 790, 0.61);
@@ -15,10 +16,20 @@ int main() {
     car1.accelerate(true);
     car2.accelerate(true);
     for (double t = 0; t <= 60; t += dt) {
-    car1.drive(dt);
-    car2.drive(dt);
-       
-    // TODO: print out who's in the lead
+        car1.drive(dt);
+        car2.drive(dt);
+        
+        
+        // TODO: print out who's in the lead
+        if (car1.getState().position == car2.getState().position){
+            std::cout << "Tie" << std::endl;
+        }
+        else if (car1.getState().position > car2.getState().position){
+            std::cout << car1.getModel() << " is in the lead" << std::endl;
+        }
+        else{
+            std::cout << car2.getModel() << " is in the lead" << std::endl;
+        }
     }
    
     return 0;
