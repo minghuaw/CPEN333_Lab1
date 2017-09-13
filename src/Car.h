@@ -13,7 +13,6 @@ private:
     double mass;
     double engine_force;
     double drag_area;
-    double t_step; 
     int N;
     bool accelerator;
     State car_state;
