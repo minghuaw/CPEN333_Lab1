@@ -26,7 +26,7 @@ public:
     double getMass();
     void accelerate(bool on);
     virtual void drive(double dt);
-    State getState();
+    State* getState();
 };
 
 class Prius: public Car{
